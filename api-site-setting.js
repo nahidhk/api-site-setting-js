@@ -14,10 +14,12 @@ document.getElementById('api-found').style="color: #fff;background-color:#343754
 
 
 function rundatapto(){
-document.getElementById('api-found').style="color: #fff;background-color:#343754; height: 250px;width: 150px;border-radius: 6px; position: fixed; top: 10%;left: 0;z-index: 10000;"
+document.getElementById('api-found').style="color: #fff;background-color:#343754; height: 250px;width: 170px;border-radius: 6px; position: fixed; top: 10%;left: 0;z-index: 10000;"
 document.getElementById('api-found').innerHTML=`<svg onclick="hellocall()" style="padding:5px; xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-</svg><span>setting</span><hr>`
+</svg><span>setting</span><hr>
+<p onclick="opendark()">ON Dark mode</p>
+`
 }
 
 function hellocall(){
@@ -32,4 +34,12 @@ function hellocall(){
 </div> 
   
   `
+}
+
+function opendark(){
+document.getElementsByTagName("body")[0].style.backgroundColor = "#42445A";
+document.getElementsByTagName("body")[0].style.color = "#FFFFFF";
+
+//document.getElementsByTagName("body").innerHTML="nodat";
+alert("ok")
 }
