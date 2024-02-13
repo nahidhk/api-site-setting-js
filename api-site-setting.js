@@ -39,7 +39,15 @@ function hellocall(){
 function opendark(){
 document.getElementsByTagName("body")[0].style.backgroundColor = "#42445A";
 document.getElementsByTagName("body")[0].style.color = "#FFFFFF";
+localStorage.setItem('darkbody','#42445A');
+localStorage.setItem('barkfont','#FFFFFF');
+}
+allcallapkrunc();
+function allcallapkrunc(){
+  var datarunio1 = localStorage.getItem('darkbody');
+  var fontdataff1 = localStorage.getItem('barkfont');
+ document.getElementsByTagName("body")[0].style.backgroundColor = datarunio1;
+ document.getElementsByTagName("body")[0].style.color = fontdataff1;
 
-//document.getElementsByTagName("body").innerHTML="nodat";
-alert("ok")
+
 }
