@@ -18,7 +18,7 @@ document.getElementById('api-found').style="color: #fff;background-color:#343754
 document.getElementById('api-found').innerHTML=`<svg onclick="hellocall()" style="padding:5px; xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
 </svg><span>setting</span><hr>
-<p onclick="opendark()">ON Dark mode</p>
+<p id='ipoio' onclick="opendark()"> Lite</p>
 `
 }
 
@@ -49,5 +49,9 @@ function allcallapkrunc(){
  document.getElementsByTagName("body")[0].style.backgroundColor = datarunio1;
  document.getElementsByTagName("body")[0].style.color = fontdataff1;
 
+}
 
+styledatarun1();
+function styledatarun1(){
+  document.getElementById(ipoio).style="margin:10px"
 }
