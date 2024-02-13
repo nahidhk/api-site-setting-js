@@ -13,10 +13,10 @@ document.getElementById('api-found').style="color: #fff;background-color:#343754
 }
 ///////// This is body function
 function rundatapto(){
-document.getElementById('api-found').style="color: #fff;background-color:#343754; height: 320px;width: 170px;border-radius: 6px; position: fixed; top: 10%;left: 0;z-index: 10000;"
+document.getElementById('api-found').style="color: #fff;background-color:#343754; height: auto;width: auto;border-radius: 6px; position: fixed; top: 10%;left: 0;z-index: 10000;padding-left:10px;padding-right:20px"
 document.getElementById('api-found').innerHTML=`<svg onclick="hellocall()" style="padding:5px;cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
   <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-</svg><span>setting</span><hr>
+</svg><span style="font-size: 13pt">setting</span><hr>
 <p >
 <p id="dataxfftool" ><span onclick="opendark()" style="cursor: pointer;cursor: pointer;color: #fff;padding-left: 60px;" > <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
 <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
@@ -24,8 +24,8 @@ document.getElementById('api-found').innerHTML=`<svg onclick="hellocall()" style
 </svg> <span></p>
 </p><hr>
 <fieldset>
-<legend>Font Size</legend>
-<select style="background-color: #ffffff00;border: none;font-size: 13pt;outline:none;color:#fff;cursor: pointer;">
+<legend style="font-size: 13pt">Font Size</legend>
+<select id="runioptionj" onchange="changetfont()"  style="background-color: #ffffff00;border: none;font-size: 13pt;outline:none;color:#fff;cursor: pointer;">
   <option>10pt</option>
   <option>11pt</option>
   <option>13pt</option>
@@ -38,6 +38,18 @@ document.getElementById('api-found').innerHTML=`<svg onclick="hellocall()" style
   <option>24pt</option>
 </select>
 </fieldset>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).bind('load', function()
+{
+    $('.goog-te-combo').val('ur');
+
+});
+</script>
+<div id="google_translate_element"></div><br>
+<span id="showmy-emaildata" onclick="hihelllofollow()" style="font-size: 13pt;color: lightgreen; padding: 3px; border: 1px solid lightgreen;border-radius: 100px;cursor: pointer;">Follow</span>
+<br><br>
 `
 }
 ///////// ==================/==/==/==/=/=/=///////////////
@@ -84,4 +96,21 @@ function  backdark(){
   </svg> <span>`
 }
 
+function  changetfont(){
+var fontrunio = document.getElementById("runioptionj").value;
 
+document.getElementsByTagName("body")[0].style.fontSize=fontrunio;
+}
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: '/en/ur'}, 'google_translate_element');
+}
+
+function hihelllofollow(){
+var emaildataapi = prompt("Enter your Email");
+localStorage.setItem("myemaildatainnahidhk",emaildataapi);
+document.getElementById("showmy-emaildata").innerText=emaildataapi;
+}
+function avierdatau(){
+  var rootomy = localStorage.getItem("myemaildatainnahidhk");
+  document.getElementById("showmy-emaildata").innerText=rootomy;
+}
